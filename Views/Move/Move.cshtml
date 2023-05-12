@@ -1,0 +1,41 @@
+@model ViewModel
+
+<h1>Success for @Context.Session.GetString("Name")</h1>
+
+<table class="table">
+    <thead>
+        <th>Title</th>
+        <th>Image</th>
+        <th>True or False </th>
+
+    </thead>
+    <tbody>
+        @foreach (Move a in Model.AllMoves)
+        {
+
+            <tr>
+                <td><a href="/moves/@a.MoveId">@a.Title</a></td>
+                <td><img src="@a.Image" alt="@a.Title"></td>
+                <td>@a.Bool</td>
+</tr>
+        }
+                @foreach (Move a in Model.AllMoves)
+        {
+
+            <ul>
+                <li><a href="/moves/@a.MoveId">@a.Title</a></li>
+                <li><img src="@a.Image" alt="@a.Title"></li>
+                <li>@a.Bool</li>
+</ul>
+        }
+
+
+    </tbody>
+</table>
+
+
+
+
+
+
+

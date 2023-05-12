@@ -1,0 +1,24 @@
+@model ViewModel
+
+<div>
+
+    <div>
+
+        <p>@Model.Move.Title</p>
+        <img src="@Model.Move.Image" alt="@Model.Move.Title">
+
+
+    </div>
+
+
+</div>
+
+<a href="/moves/edit/@Model.Move.MoveId" class="btn btn-warning">Edit</a>
+
+</div>
+<div>
+    <form asp-controller="Move" asp-action="Delete" asp-route-artId="@Model.Move.MoveId" method="POST">
+        <button class="btn btn-danger">Delete</button>
+    </form>
+    
+</div>

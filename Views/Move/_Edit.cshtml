@@ -1,0 +1,23 @@
+@model Move
+       
+        <form asp-controller="Move" asp-action="Update" asp-route-moveId="@Model.MoveId" method="POST">
+    <div class="form-group mb-3 w-100">
+        <label asp-for="Image"></label>
+        <span asp-validation-for="Image" class="text-danger font-weight-bold form-control-validation"></span>
+        <input class="form-control" asp-for="Image" />
+    </div>
+
+    <div class="form-group mb-3 w-100">
+        <label asp-for="Title"></label>
+        <span asp-validation-for="Title" class="text-danger font-weight-bold form-control-validation"></span>
+        <input class="form-control" asp-for="Title" />
+    </div>
+
+
+    <div class="form-group mb-3 w-100">
+        <label asp-for="Bool"></label>
+        <span asp-validation-for="Bool" class="text-danger font-weight-bold form-control-validation"></span>
+        <input type="checkbox" asp-for="Bool" />
+    </div>
+    <div><button class="btn btn-primary">Edit</button></div>
+</form>
